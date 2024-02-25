@@ -6,7 +6,7 @@
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon backend/index.js",
-    "client": "nodemon -e js,mjs,cjs,json,html,css frontend/index.js"
+    "client": "nodemon frontend/index.js"
   },
   "author": "",
   "license": "ISC",

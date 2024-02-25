@@ -1,4 +1,4 @@
-import { books } from './local-books.js';
+import { books } from './static/local-books.js';
 
 // Script loaded
 console.info("Script loaded")
