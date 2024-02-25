@@ -1,0 +1,28 @@
+@import url('variables.css');
+
+.menu_overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background-color: var(--primary-color);
+	padding: 1rem;
+    transition: left 0.5s;
+}
+
+.menu_overlay ul {
+	list-style-type: none;
+	padding: 1rem;
+	background-color: white;
+	border-radius: var(--radius);
+}
+
+.menu_overlay ul li {
+	padding: 0.5rem;
+}
+
+.menu_overlay ul a {
+	color: var(--accent-color-2);
+	font-size: large;
+	text-decoration: none;
+}

@@ -1,0 +1,26 @@
+:root {
+	/* Colors */
+	--primary-color: #607D8B; /* Blue Grey */
+	--secondary-color: #78909C; /* Lighter Blue Grey */
+	--accent-color-1: #FFC107; /* Amber */
+	--accent-color-2: #FF5722; /* Deep Orange */
+	--accent-color-3: #4CAF50; /* Green */
+
+	/* layout */
+	--radius: 5px;
+
+	/* sizes */
+	--small: 0.75rem;
+	--medium: 1rem;
+	--large: 1.5rem;
+	--extra-large: 2.5rem;
+
+	/* fonts */
+	--font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+
+body {
+	padding: 2rem;
+	font-family: var(--font-family)
+}

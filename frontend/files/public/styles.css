@@ -1,0 +1,10 @@
+@import url('variables.css');
+@import url('menu.css');
+
+img {
+	max-width: 200px;
+}
+
+.menu_overlay--hidden {
+	display: none;
+}

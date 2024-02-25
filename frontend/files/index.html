@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout assessment</title>
+    <link rel="stylesheet" href="/public/normalize.css">
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Book reviews</h1>
+        <div>
+            <button>Menu</button>
+        </div>
+    </header>
+    <div id="menu_overlay" class="menu_overlay menu_overlay--hidden">
+        <button>Close</button>
+        <ul>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Logout</a></li>
+            <li><a href="#">Search profiles</a></li>
+            <li><hr /></li>
+            <li><a href="#">Preferences</a></li>
+        </ul>
+    </div>
+    <div>
+        <!-- A section with the user profile image on the left and a summary of their accout on the right -->
+        <div>
+            <div>
+                <img src="/public/images/profile.png" alt="Profile image">
+                <h2>Username</h2>
+            </div>
+            <div>
+                <p>Books reviewed: 0</p>
+                <p>Books read: 0</p>
+            </div>
+        </div>
+        <!-- a section with a grid of book components -->
+        <div id="book-grid">
+            <!-- book components will be added here -->
+        </div>
+    </div>
+
+    <!-- Book component template -->
+    <template id="bookComponent">
+        <div>
+            <img src="/public/images/music-madness.webp">
+            <h3></h3>
+            <p></p>
+        </div>
+    </template>
+    <script src="/public/script.js" type="module"></script>
+</body>
+</html>
