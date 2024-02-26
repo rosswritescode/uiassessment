@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { StockService, StockPrice } from './stock.service';
@@ -11,25 +11,19 @@ import { StockService, StockPrice } from './stock.service';
     </div>
   `,
 })
-export class LiveStockTickerComponent implements OnInit, OnDestroy {
+export class LiveStockTickerComponent implements OnInit {
   stock?: StockPrice;
   private subscription: Subscription = new Subscription();
 
   constructor(private stockService: StockService) {}
 
   ngOnInit(): void {
-    // Bug: Misuse of 'map' instead of 'switchMap' and missing unsubscribe
     this.subscription = interval(5000).pipe(
       map(() => {
         this.stockService.getStockPrice('AAPL').subscribe(price => {
           this.stock = price;
         });
-        // Nested subscription here leads to a memory leak
       })
     ).subscribe();
-  }
-
-  ngOnDestroy(): void {
-    // Missing implementation to unsubscribe
   }
 }
